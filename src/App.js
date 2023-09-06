@@ -9,15 +9,7 @@ function App() {
     const { fetchBooks } = useContext(BooksContext);
     useEffect(() => {
         fetchBooks();
-    }, []);
-
-    
-        // const updatedBooks = [
-        //     ...books,
-        //     { id: Math.round(Math.random() * 9999), title: title }
-        // ];
-        // setBooks(updatedBooks);
-    };
+    }, [fetchBooks]);
 
     return (
     <div className="app">
@@ -27,7 +19,7 @@ function App() {
     </div>
     );
 
-
+};
 
 
 export default App;
